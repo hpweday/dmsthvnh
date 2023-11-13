@@ -207,7 +207,7 @@ ul {
 .content_search-img {
     height: 32rem;
     width: 100%;
-    background-image: url(../assets/img/backGR_2.jpg);
+    background-image: url(../img/backGR_2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -493,16 +493,16 @@ ul {
 }
 
 .hanoi_locate {
-    background-image: url(./assets/img/hanoi.jpg);
+    background-image: url(../img/hanoi.jpg);
     
 }
 
 .danang_locate {
-    background-image: url(./assets/img/danang_bg1.jpg);
+    background-image: url(../img/danang_bg1.jpg);
 }
 
 .tphcm_locate {
-    background-image: url(./assets/img/tpHCM.jpg);
+    background-image: url(../img/tpHCM.jpg);
 }
 
 .location_us > ul > li {
