@@ -56,11 +56,11 @@ ul {
 
 .navbar_logo {
     background-color: #fff;
-    width: 10%;
+    width: 15%;
 }
 
 .navbar_content {
-    width: 65%;
+    width: 60%;
     background-color: #fff;
 }
 
@@ -571,12 +571,31 @@ ul {
 }
 
 .background_stand {
+    position: relative;
     background-repeat: no-repeat;
     height: 300px;
     width: 100%;
     background-size: cover;
     border-radius: 10px;
     transition: all ease 0.3s;
+}
+
+.label_point {
+    right: 3rem;
+    position: absolute;
+    top: 2rem;
+    background-color: #830a0a;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0, 0.4);
+    width: 4rem;
+    height: 4rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .background_title {
