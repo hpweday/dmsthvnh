@@ -207,7 +207,7 @@ ul {
 .content_search-img {
     height: 32rem;
     width: 100%;
-    background-image: url(./assets/img/backGR_2.jpg);
+    background-image: url(../assets/img/backGR_2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
