@@ -23,12 +23,22 @@
     <div class="navbar_wrap">
         <div class="navbar">
             <div class="navbar_logo">
-                <img src="./assets/img/logo/logo Đỏ.png" alt="" style="width: 15rem;">
+                <a href="/index.html">
+                    <img src="./assets/img/logo/logo Đỏ.png" alt="" style="width: 15rem;">
+                </a>
             </div>
             <div class="navbar_content">
                 <ul>
-                    <li>Trung tâm tiệc cưới</li>
-                    <li>Wedding planner</li>
+                    <li>
+                        <a href="/restaurant.html">
+                            Trung tâm tiệc cưới
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/weddingPlanner.html">
+                            Wedding planner
+                        </a>
+                    </li>
                     <li><i class="fa-solid fa-ellipsis"></i></li>
                 </ul>
             </div>
@@ -85,12 +95,29 @@
                                 <input type="text" id="datepickerEnd" placeholder="Chọn ngày">
                             </div>
                         </div>
-                        <div class="select_type-bar search_bar-focus">
+                        <div class="select_type-bar search_bar-focus" id="arrange_count">
                             <div class="select_type-bar-left">
                                 <img style="width: 3.5rem;" src="./assets/img/couple-couple-senior-svgrepo-com.png" alt="">
                             </div>
                             <div class="select_type-bar-content" style="width: 100%;">
                                 <input type="number" class="search_cf" id="quantity_people" placeholder="Nhập số lượng khách">
+                            </div>
+                            
+                        </div>
+
+                        <div class="select_type-bar search_bar-focus hide" id="arrange_planner">
+                            <div class="select_type-bar-left">
+                                <img style="width: 2.5rem; position: relative; bottom: -7px;" src="./assets/img/price-tag-svgrepo-com.png" alt="">
+                            </div>
+                            <div class="select_type-bar-content" style="width: 100%; position: relative;">
+                                <span>Sắp xếp giá theo: <p id="type_arrange">Mặc định</p></span>
+
+
+                                <ul id="list_arrange" class="hide">
+                                    <li>Mặc định</li>
+                                    <li>Cao đến thấp</li>
+                                    <li>Thấp đến cao</li>
+                                </ul>
                             </div>
                             
                         </div>
@@ -116,7 +143,7 @@
                 <h2 class="title_about">ĐỊA ĐIỂM NỔI BẬT</h2>
 
                 <ul class="flex_center">
-                    <li>
+                    <li class="locate_view">
                         <div class="img_locate hanoi_locate"></div>
                         <div class="name_locate">
                             <span>Hà Nội</span>
@@ -125,7 +152,7 @@
                             <span>02</span>
                         </div> -->
                     </li>
-                    <li>
+                    <li class="locate_view">
                         <div class="img_locate danang_locate"></div>
                         <div class="name_locate">
                             <span>Đà Nẵng</span>
@@ -134,7 +161,7 @@
                             <span>02</span>
                         </div> -->
                     </li>
-                    <li>
+                    <li class="locate_view">
                         <div class="img_locate tphcm_locate"></div>
                         <div class="name_locate">
                             <span>Hồ Chí Minh</span>
@@ -151,13 +178,13 @@
 
                 <div class="outStanding_nav">
                     <ul>
-                        <li class="locate_check">
+                        <li class="locate_check" id="outStand_HN">
                             <span>Hà Nội</span>
                         </li>
-                        <li>
+                        <li id="outStand_DN">
                             <span>Đà Nẵng</span>
                         </li>
-                        <li>
+                        <li id="outStand_HCM">
                             <span>Hồ Chí Minh</span>
                         </li>
                     </ul>

@@ -28,10 +28,49 @@ let handleLogicData = {
     addEventDOM: function() {
         const _this = this;
 
+        $(window).click(function(event) {
+            if (!event.target.matches('.select_type-bar-content span') && !event.target.matches('#list_arrange') && !event.target.matches('#type_arrange')) {
+                $('#list_arrange').addClass('hide')
+              }
+            // if(e.ta)
+        })
+
 
         $('.search_select-bar').click(function() {
             $('.search_select-bar-check').removeClass('search_select-bar-check')
             $(this).addClass('search_select-bar-check')
+
+            const typeSearch = $('.search_select-bar-check span').text();
+
+            switch(typeSearch) {
+                case "Trung tâm tiệc cưới":
+                    $('#arrange_count').removeClass('hide')
+                    $('#arrange_planner').addClass('hide')
+                    break;
+
+                case "Wedding Planner":
+
+                    $('#arrange_count').addClass('hide')
+                    $('#arrange_planner').removeClass('hide')
+
+
+                    break;
+            }
+
+        })
+
+        $('#arrange_planner span').click(function() {
+            $('#list_arrange').removeClass('hide')
+        })
+
+
+        $('#list_arrange li').click(function() {
+            const text = $(this).text();
+            console.log(text)
+            $('#type_arrange').html(text)
+
+            $('#list_arrange').addClass('hide')
+
         })
         
         
@@ -60,7 +99,26 @@ let handleLogicData = {
 
         })
 
+        $('.locate_view').click(function() {
+            const textType = $(this).find('.name_locate span').text();
 
+            $('.locate_check').removeClass('locate_check')
+
+            switch(textType) {
+                case "Hà Nội":
+                    $('#outStand_HN').addClass('locate_check')
+                    _this.scrollWithLocate(1);
+                    break;
+                case "Đà Nẵng":
+                    $('#outStand_DN').addClass('locate_check')
+                    _this.scrollWithLocate(2)
+                    break;
+                case "Hồ Chí Minh":
+                    $('#outStand_HCM').addClass('locate_check')
+                    _this.scrollWithLocate(3)
+                    break;
+            }
+        })
 
 
         
@@ -96,6 +154,18 @@ let handleLogicData = {
     },
 
 
+    scrollWithLocate: function(id) {
+        this.renderRestaurantByCity(id)
+        
+
+        $('html, body').animate({
+            scrollTop: $('.outStanding').offset().top
+          }, 500); 
+
+        
+    },
+
+
     preSearchBar: function() {
 
         const _this = this;
@@ -107,15 +177,16 @@ let handleLogicData = {
         const nameOrCity = $('#nameOrCity').val();
         const quantityPeople = $('#quantity_people').val();
 
+        const typeArrange = $('#type_arrange').text();
+
         switch(typeSearch) {
             case "Trung tâm tiệc cưới":
                 var result = _this.filterSearchRestaurant(nameOrCity,quantityPeople, startDate, endDate)
 
-                console.log(result)
                 break;
 
             case "Wedding Planner":
-
+                var result = _this.filterSearchWeddingPlanner(nameOrCity, typeArrange)
                 break;
         }
     },
@@ -130,19 +201,21 @@ let handleLogicData = {
         if(listRestaurant) {
             const htmlRes = listRestaurant.map(function(res) {
                 return `<li>
-                <div class="background_stand" style="background-image: url(./assets/img/${res.folder}/${res.timeSrc});">
-                    <label class="label_point">${res.point}</label>
-                </div>
-                <div class="background_title">${res.title}</div>
-                <div class="background_description">
-                    <div class="star_wrap">
-                        ${_this.getStar(res.star).join('')}
-                    </div>
-                    <div class="address_des">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <span>${res.addressShort}</span>
-                    </div>
-                </div>
+                    <a href="/${res.pageID}.html">
+                        <div class="background_stand" style="background-image: url(./assets/img/${res.folder}/${res.timeSrc});">
+                            <label class="label_point">${res.point}</label>
+                        </div>
+                        <div class="background_title">${res.title}</div>
+                        <div class="background_description">
+                            <div class="star_wrap">
+                                ${_this.getStar(res.star).join('')}
+                            </div>
+                            <div class="address_des">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>${res.addressShort}</span>
+                            </div>
+                        </div>
+                    </a>
             </li>`
             })
 
@@ -176,6 +249,45 @@ let handleLogicData = {
               }
             }
         }
+
+
+        return arrayDone;
+    },
+
+
+    filterSearchWeddingPlanner: function(nameOrCity, typeArrange) {
+      
+        let arrayDone = []
+
+        let valueFilter = dataWeddingPlanner.filter(function(it) {
+            return (it.name.toLowerCase().includes(nameOrCity.toLowerCase()) || it.address.toLowerCase().includes(nameOrCity.toLowerCase()))
+        })
+
+        switch(typeArrange) {
+            case "Thấp đến cao": 
+                valueFilter.sort(function(a, b) {
+                    return a.argeCost - b.argeCost;
+                });
+              break;
+            case "Cao đến thấp": 
+                valueFilter.sort(function(a, b) {
+                    return b.argeCost - a.argeCost;
+                });
+            break;
+        }
+
+        console.log(valueFilter)
+        // for (let i = 0; i < valueFilter.length; i++) {
+        //     // Duyệt qua mỗi phần tử trong mảng
+        //     for (let j = 0; j < valueFilter[i].EmptyDay.length; j++) {
+        //       // Kiểm tra xem phần tử có nằm trong khoảng không
+        //       if (valueFilter[i].EmptyDay[j] >= dayStart && valueFilter[i].EmptyDay[j] <= dayEnd) {
+        //         // Nếu có, thêm mảng vào kết quả và thoát khỏi vòng lặp trong mảng hiện tại
+        //         arrayDone.push(valueFilter[i]);
+        //         break;
+        //       }
+        //     }
+        // }
 
 
         return arrayDone;

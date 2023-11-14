@@ -10,6 +10,11 @@
     --primary-blue-color: #5392f9;
 }
 
+a {
+    text-decoration: none;
+    color: #000;
+}
+
 html {
     font-size: 62.5%;
     background-color: #fff;
@@ -146,7 +151,7 @@ ul {
     margin-right: 4rem;
 }
 
-.navbar_content li:hover {
+.navbar_content li:hover a {
     color: var(--primary-color);
 }
 
@@ -212,6 +217,20 @@ ul {
     background-size: cover;
 }
 
+.phone_wrap {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.content_search-img-weddingPl {
+    height: 32rem;
+    width: 100%;
+    background-image: url(../img/backGR_4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .content_searchBar-wrap {
     position: absolute;
     height: 33rem;
@@ -232,7 +251,7 @@ ul {
 
 .filter_search-bar {
     height: 100%;
-    filter: drop-shadow(0px 2px 3px black);
+    /* filter: drop-shadow(0px 2px 3px black); */
 }
 
 .search_bar-select {
@@ -557,12 +576,14 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .outStanding_content ul li {
-    width: 33.33%;
+    width: 29.33%;
     margin: 0 2rem;
     cursor: pointer;
+    margin-bottom: 3rem;
 }
 
 
@@ -632,4 +653,40 @@ ul {
 .address_des {
     font-size: 1.5rem;
     color: var(--primary-blue-color);
+}
+
+.select_type-bar-content span {
+    font-size: 1.5rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-left: 2rem;
+    color: #000;
+}
+
+#type_arrange {
+    margin-left: 0.5rem;
+}
+
+
+#list_arrange {
+    position: absolute;
+    bottom: -120px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0, 0.3);
+    width: 100%;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+#list_arrange li {
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+}
+
+
+#list_arrange li:hover {
+    color: var(--primary-color);
+    opacity: 0.6;
 }
