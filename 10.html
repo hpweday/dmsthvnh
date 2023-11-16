@@ -16,6 +16,19 @@
     <script src="./library/jquery-3.3.1.min.js"></script>
     <script src="./data.js"></script>
     <script src="./detail.js" defer></script>
+
+    <style>
+        .modal_results-content input {
+            width: 100%;
+            padding: 1rem 3rem;
+            border-radius: 20px;
+            border: 1px solid;
+        }
+
+        .modal_results {
+            height: 50%;
+        }
+    </style>
 </head>
 <body>
     <div class="navbar_wrap">
@@ -51,7 +64,7 @@
         </div>
     </div>
     <div class="content_wrap content-wrap-detail">
-        <div class="detail_imgs">
+        <!-- <div class="detail_imgs">
             <div class="detail_img-main" style="background-image: url(./assets/img/byKiet/capture/bykiet-154-1474.jpg);"></div>
             <div class="detail_img-list">
                 <div class="detail_img-item" style="background-image: url(./assets/img/byKiet/capture/bykiet-269-9667.jpg);"></div>
@@ -65,12 +78,13 @@
         <div class="detail_nav-content">
             <div class="detail_nav-content-left">
                 <ul>
-                    <li>Tổng quan</li>
-                    <li>Concept</li>
+                    <li id="general_scroll">Tổng quan</li>
+                    <li id="concept_scroll">Concept</li>
                 </ul>
             </div>
             <div class="detail_nav-content-right">
                 <span>Giá từ: <p>40.000.000 VNĐ</p> - <p>60.000.000 VNĐ</p></span>
+                <button id="Booking_btn">Đặt</button>
             </div>
         </div>
         <div class="detail_content">
@@ -78,22 +92,165 @@
                 <div class="detail_content-title">
                     <div class="">
                         <div class="detail_textTitle">Căn hộ LuxHomes Saigon – Vinhomes Central Park</div>
-                        <div class="detail_textMainAddress">Trần Đăng Ninh, Hà Nội - <p onclick="searchAddressGG('Trống Đồng Place, Trần Đăng Ninh Hà Nội')">TRÊN BẢN ĐỒ</p></div>
+                        <div class="detail_textMainAddress">Trần Đăng Ninh, Hà Nội - <p onclick="searchAddressGG('Trống Đồng Place, Trần Đăng Ninh Hà Nội')">Trên bản đồ</p></div>
                     </div>
                     <div class="detail_content-description">
-
+                        <p>Conveniently situated in the Bình Thạnh part of Ho Chi Minh City, this property puts you close to attractions and interesting dining options. Don't leave before paying a visit to the famous War Remnants Museum. Restaurant, indoor pool and sauna are among the special facilities that will enhance your stay with on-site convenience.</p>
                     </div>
                 </div>
 
-                <div class="detail_outStanding"></div>
+                <div class="detail_outStanding">
+                    <h3>Điểm nổi bật</h3>
+                    <div class="">
+                        <div class="detail_outStanding-item">
+                            <img src="./assets/img/dish.png" alt="">
+                            <span>Tiện nghi</span>
+                        </div>
+                        <div class="detail_outStanding-item">
+                            <img src="./assets/img/glass.png" alt="">
+                            <span>Sang trọng</span>
+
+                        </div>
+                        <div class="detail_outStanding-item">
+                            <img src="./assets/img/wife.png" alt="">
+                            <span>Đa dạng</span>
+
+                        </div>
+                        <div class="detail_outStanding-item">
+                            <img src="./assets/img/waiter.png" alt="">
+                            <span>Tận tâm</span>
+
+                        </div>
+                    </div>
+                    
+                </div>
+
+
+                <div class="detail_concept">
+                    <h3>Concept</h3>
+                    <div class="detail_concept-list">
+                        <div class="detail_concept-item">
+                            <span class="detail_concept-item-title">
+                                - Concept Vibrant
+                            </span>
+                            <span class="detail_concept-item-price">
+                                Từ 50.000.000 đến 60.000.000 (VNĐ)
+                            </span>
+
+                            <div class="detail_concept-imgs">
+                                <div class="detail_concept-img" ></div>
+                                <div class="detail_concept-img" ></div>
+                                <div class="detail_concept-img" ></div>
+                            </div>
+                        </div>
+                        <div class="detail_concept-item">
+                            <span class="detail_concept-item-title">
+                                - Concept Vibrant
+                            </span>
+                            <span class="detail_concept-item-price">
+                                Từ 50.000.000 đến 60.000.000 (VNĐ)
+                            </span>
+
+                            <div class="detail_concept-imgs">
+                                <div class="detail_concept-img" ></div>
+                                <div class="detail_concept-img" ></div>
+                                <div class="detail_concept-img" ></div>
+                            </div>
+                        </div>
+                        <div class="detail_concept-item">
+                            <span class="detail_concept-item-title">
+                                - Concept Vibrant
+                            </span>
+                            <span class="detail_concept-item-price">
+                                Từ 50.000.000 đến 60.000.000 (VNĐ)
+                            </span>
+
+                            <div class="detail_concept-imgs">
+                                <div class="detail_concept-img" style="background-image: url(./assets/img/bliss/mekong/img_0621a.png);" ></div>
+                                <div class="detail_concept-img" ></div>
+                                <div class="detail_concept-img" ></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
             </div>
             <div class="detail_content-right">
-                <div class="detail_content-point"></div>
-                <div class="detail_content-address"></div>
+                <div class="detail_content-point">
+                    <div class="detail_content-point-item">
+                        <img src="./assets/img/phone.png" alt="">
+                        
+                        <span>091234578</span>
+                    </div>
+                    <div class="detail_content-point-item">
+                        <img src="./assets/img/price.png" alt="">
+                        
+                        <span>250000 - 400000 (người)</span>
+                    </div>
+                    <div class="detail_content-point-item">
+                        <img src="./assets/img/mark-svgrepo-com.png" alt="">
+                        
+                        <span>7.8 (điểm đánh giá)</span>
+                    </div>
+                </div>
+                <div class="detail_content-address">
+                    <div class="">
+                        <img src="./assets/img/property-map-entry-1.svg" alt="">
+                    </div>
+                    <div class="detail_content-address-list">
+                        <h3>Danh sách cơ sở</h3>
+                        <div class="detail_content-address-list-item">
+                            <span onclick="searchAddressGG('K5 Nghi Tàm, số 11 Xuân Diệu, Tây Hồ, Hà Nội')">K5 Nghi Tàm, số 11 Xuân Diệu, Tây Hồ, Hà Nội.</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </div> -->
+
 
     </div>
+
+    
+    <div class="modal_results-wrap hide" style="margin-bottom: 0rem;">
+        <div class="modal_results">
+            <div class="modal_results-header">
+                <span>Thông tin khách hàng</span>
+                <button id="close_result-search"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal_results-content-wrap">
+
+                <div class="modal_results-content" style="display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: space-around;
+                height: 100%;
+                padding: 1rem 3rem;">
+                   <input type="text" placeholder="Nhập họ và tên khách hàng">
+                   <input type="text" placeholder="Nhập số điện thoại khách hàng">
+                   <input type="text" placeholder="Nhập email khách hàng">
+                   <input type="text" id="input_concept" placeholder="Nhập tên Concept">
+                </div>
+
+            </div>
+            <div class="modal_results-footer">
+                <div id="alert" class="hide" style="    display: flex;
+                flex-direction: column;
+                color: green;
+                font-size: 1.3rem;
+                font-weight: 600;
+                width: 100%;
+                position: relative;
+                text-align: center;
+                left: 4%;">
+                    <span style="margin-bottom: 0.5rem;">Chúc mừng bạn đã đặt thành công.</span>
+                    <span>Chúng tôi sẽ sớm liên lạc lại với bạn!</span>
+                </div>
+                <button id="close_result-searchft">Đặt</button>
+            </div>
+        </div>
+    </div>
+
     <div class="footer_wrap">
         <div>
             <p>Mọi nội dung liên hệ Weday. Bảo lưu mọi bản quyền.</p>

@@ -200,6 +200,7 @@ let handleLogicData = {
                 if(result.length == 0) {
                     console.log('empty')
                     $('.search_modal-empty').removeClass('hide')
+                    $('.modal_results-content').html('')
                 } else {
                     _this.renderItemSearchRestaurant(result);
                 }
@@ -209,6 +210,7 @@ let handleLogicData = {
                 var resultWedding = _this.filterSearchWeddingPlanner(nameOrCity, typeArrange)
                 if(resultWedding.length == 0) {
                     $('.search_modal-empty').removeClass('hide')
+                    $('.modal_results-content').html('')
                 } else {
                     _this.renderItemSearchWeddingPlanner(resultWedding)
                 }

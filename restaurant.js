@@ -4,7 +4,7 @@
 function renderRestaurant() {
     const htmlRes = listRestaurantData.map(function(res) {
         return `<li>
-            <a href="/${res.pageID}.html">
+            <a href="./${res.pageID}.html">
                 <div class="background_stand" style="background-image: url(./assets/img/${res.folder}/${res.timeSrc});">
                     <label class="label_point">${res.point}</label>
                 </div>

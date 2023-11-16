@@ -8,7 +8,7 @@ let listRestaurantData = [
         'folder': 'trongdong',
         'title': 'Trống Đồng Palace',
         'description': "Menu đa dạng, cơ sở vật chất sang trọng",
-        'imgSrcs': ["IMG_4277.PNG", "IMG_4276.JPG", "IMG_4275.PNG", "IMG_4279.JPG", "IMG_4280.JPG", "IMG_4278.JPG"],
+        'imgSrcs': ["IMG_4277.PNG", "IMG_4276.JPG", "IMG_4275.PNG", "IMG_4279.JPG", "IMG_4280.JPG", "IMG_4274.WEBP"],
         'timeSrc': "IMG_4278.JPG",
         'address': ["Trần Đăng Ninh, Hà Nội", "Quán Sứ, Hà Nội", "Hàng Cót, Hà Nội", "Hà Đông, Hà Nội", "Hoàng Quốc Việt, Hà Nội"],
         'EmptyDay': [18, 19, 20, 22, 23, 28, 30],
@@ -30,7 +30,7 @@ let listRestaurantData = [
         'folder': 'sheraton',
         'title': 'Sheraton - Hà Nội',
         'description': "Cơ sở vật chất hiện đại, sang trọng, menu độc đáo mang đậm chất Á - Âu",
-        'imgSrcs': ["IMG_4290.JPG", "IMG_4289.JPG", "IMG_4292.JPG", "IMG_4288.JPG", "IMG_4291.JPG", "IMG_4287.JPG"],
+        'imgSrcs': ["New.JPG", "IMG_4289.JPG", "IMG_4292.JPG", "IMG_4288.JPG", "IMG_4291.JPG", "IMG_4287.JPG"],
         'timeSrc': "IMG_4290.JPG",
         'address': ["K5 Nghi Tàm, số 11 Xuân Diệu, Tây Hồ, Hà Nội."],
         'EmptyDay': [13, 14, 15, 20, 21, 29, 30],
@@ -53,7 +53,7 @@ let listRestaurantData = [
         'folder': 'melia',
         'title': 'Melia - Hà Nội',
         'description': "Cơ sở vật chất hiện đại, tiện nghi, menu 5 sao vô cùng cao cấp",
-        'imgSrcs': ["IMG_4284.JPG", "IMG_4285.JPG", "IMG_4286.JPG", "IMG_4282.JPG", "IMG_4283.JPG", "IMG_4281.JPG"],
+        'imgSrcs': ["IMG_4284.JPG", "IMG_4285.JPG", "IMG_4286.JPG", "IMG_4283.JPG", "IMG_4281.JPG", "New.PNG"],
         'timeSrc': "IMG_4282.JPG",
         'address': ["Số 44B, Lý Thường Kiệt, Quận Hoàng Kiếm, Hà Nội."],
         'EmptyDay': [27, 28, 29, 30],
@@ -76,7 +76,7 @@ let listRestaurantData = [
         'title': 'Golden Phoenix Palace - Đà Nẵng',
         'description': "Đây là Trung tâm Hội nghị - Tiệc cưới hàng đầu tại Miền Trung, không gian lớn và sang trọng, menu đa dạng",
         'EmptyDay': [13, 14, 17, 27, 28, 29, 30],
-        'imgSrcs': ["IMG_4321.JPG", "IMG_4325.JPG", "IMG_4322.JPG", "IMG_4324.JPG", "IMG_4323.JPG", "IMG_4320.JPG"],
+        'imgSrcs': ["IMG_4321.JPG", "IMG_4325.JPG", "IMG_4322.JPG", "IMG_4324.JPG", "IMG_4323.JPG", "New.JPG"],
         'timeSrc': "IMG_4320.JPG",
         'address': ["A8.2 Lô 1,2 Khu công viên Bắc Tượng Đài, đường 2/9, Hải Châu, Đà Nẵng."],
         'addressShort': 'Hải Châu, Đà Nẵng',
@@ -98,7 +98,7 @@ let listRestaurantData = [
         'title': 'Mikado Palace - Đà Nẵng',
         'description': "Không gian lãng mạn, sang trọng, thực đơn phong phú, phù hợp với khẩu vị người Việt Nam.",
         'EmptyDay': [13, 18, 20, 24, 25, 29, 30],
-        'imgSrcs': ["IMG_4333.JPG", "IMG_4337.JPG", "IMG_4336.JPG", "IMG_4334.JPG", "IMG_4335.JPG", "IMG_4332.JPG"],
+        'imgSrcs': ["IMG_4333.JPG", "IMG_4337.JPG", "IMG_4336.JPG", "IMG_4334.JPG", "New.JPG", "IMG_4332.JPG"],
         'timeSrc': "IMG_4335.JPG",
         'address': ["487 Nguyễn Tất Thành, Thanh Khê, Đà Nẵng."],
         'addressShort': 'Thanh Khê, Đà Nẵng',
@@ -120,7 +120,7 @@ let listRestaurantData = [
         'title': 'White Swan - Đà Nẵng',
         'description': "Không gian hiện đại, mang đậm màu sắc phương Tây. Ẩm thực độc đáo, đội ngũ nhân viên chuyên nghiệp.",
         'EmptyDay': [11, 14, 26, 28, 29, 30],
-        'imgSrcs': ["IMG_4330.JPG", "IMG_4331.JPG", "IMG_4328.JPG", "IMG_4329.JPG", "IMG_4327.JPG", "IMG_4326.JPG"],
+        'imgSrcs': ["IMG_4330.JPG", "IMG_4331.JPG", "IMG_4328.JPG", "IMG_4329.JPG", "New.JPG", "IMG_4326.JPG"],
         'timeSrc': "IMG_4327.JPG",
         'address': ["B35-36-37 Phạm Văn Đồng, Sơn Trà, Đà Nẵng."],
         'addressShort': 'Sơn Trà, Đà Nẵng',
@@ -163,7 +163,7 @@ let listRestaurantData = [
         'folder': 'gemCenter',
         'title': 'Gem Center - Hồ Chí Minh',
         'description': "Được xem là nhà hàng tiệc cưới đẹp và có không gian lớn nhất quận 1. Không gian sang trọng và quyến rũ. Menu độc đáo kết hợp hai nền ẩm thực Á - Âu",
-        'imgSrcs': ["IMG_4311.JPG", "IMG_4312.JPG", "IMG_4313.JPG", "IMG_4310.JPG", "IMG_4315.JPG", "IMG_4314.JPG", "IMG_4309.JPG"],
+        'imgSrcs': ["IMG_4311.JPG", "IMG_4312.JPG", "IMG_4313.JPG", "IMG_4310.JPG", "IMG_4315.JPG", "IMG_4314.JPG"],
         'EmptyDay': [13, 14, 16, 20, 30],
         'timeSrc': "IMG_4309.JPG",
         'address': ["8 Nguyễn Bỉnh Khiêm, Đa Kao, Quận 1, Tp. Hồ Chí Minh."],
@@ -185,7 +185,7 @@ let listRestaurantData = [
         'folder': 'galaRoyal',
         'title': 'Gala Royale - Hồ Chí Minh',
         'description': "Nổi bật với kiến trúc hiện đại những vẫn giữ nét cổ điển đặc trưng phương Tây. Menu đa dạng.",
-        'imgSrcs': ["IMG_4318.WEBP", "IMG_4315.JPG", "IMG_4317.WEBP", "IMG_4319.WEBP", "IMG_4316.WEBP", "IMG_4314.JPG"],
+        'imgSrcs': ["IMG_4318.WEBP", "IMG_4315.JPG", "IMG_4317.WEBP", "IMG_4319.WEBP", "New.JPG", "IMG_4314.JPG"],
         'timeSrc': "IMG_4316.WEBP",
         'address': ["63 Mạc Đĩnh Chi, phường Đakao, Quận 1, Tp. Hồ Chí Minh."],
         'EmptyDay': [13, 17, 21, 27, 30],
@@ -241,7 +241,7 @@ let dataWeddingPlanner = [
                     'max': 50000000,
                     'min': 40000000,
                 },
-                'imgSrc': ["1.jpg", "2.jpg", "3.jpg"]
+                'imgSrc': ["1.jpg", "2.png", "3.png"]
             },
             'vuonhoa': {
                 'name': 'Concept Vườn Hoa',
@@ -249,13 +249,14 @@ let dataWeddingPlanner = [
                     'max': 60000000,
                     'min': 50000000,
                 },
-                'imgSrc': ["flowe_2.jpg", "flower 3.jpg", "Flower_1.jpg"]
+                'imgSrc': ["flowe_2.jpg", "flower_3.jpg", "Flower_1.jpg"]
             }
         },
         
         'timeSrc': "truyenthong/A.jpg",
         "phone": "098 667 95 23",
         "argeCost": 42000000,
+        "point": 8.0,
         
     },
     {
@@ -297,6 +298,8 @@ let dataWeddingPlanner = [
         'timeSrc': "blackWhite/Wedding-Tran-Hoang0166_websize-768x513.jpg",
         "phone": "0972193457",
         "argeCost": 55000000,
+        "point": 8.3,
+
         
     },
     {
@@ -338,6 +341,8 @@ let dataWeddingPlanner = [
         'timeSrc': "Fairytale/6.jpg",
         "phone": "0912163457",
         "argeCost": 45000000,
+        "point": 7.9,
+
         
     },
     {
@@ -379,6 +384,8 @@ let dataWeddingPlanner = [
         'timeSrc': "forever/11-1024x632.jpg",
         "phone": "0905 223 049",
         "argeCost": 47000000,
+        "point": 8.5,
+
     },
     {
         'idCity': 2,
@@ -419,6 +426,7 @@ let dataWeddingPlanner = [
         'timeSrc': "floral/LIN05806.jpg",
         "phone": "0967 884 766",
         "argeCost": 58000000,
+        "point": 8.9,
     },
     {
         'idCity': 2,
@@ -459,6 +467,8 @@ let dataWeddingPlanner = [
         'timeSrc': "flower/PANA5575.jpg",
         "phone": "0783 788 789",
         "argeCost": 44000000,
+        "point": 8.3,
+
     },
     {
         'idCity': 3,
@@ -499,6 +509,8 @@ let dataWeddingPlanner = [
         'timeSrc': "takeMoon/TIM06893-1024x683.jpg",
         "phone": "093 773 1504",
         "argeCost": 38000000,
+        "point": 8.1,
+
     },
     {
         'idCity': 3,
@@ -539,6 +551,8 @@ let dataWeddingPlanner = [
         'timeSrc': "purely/trang-tri-tiec-cuoi-ngoai-troi5.jpg",
         "phone": "+84 901 332 552",
         "argeCost": 50000000,
+        "point": 8.2,
+
     },
     {
         'idCity': 3,
@@ -579,5 +593,7 @@ let dataWeddingPlanner = [
         'timeSrc': "capture/bykiet-269-9667.jpg",
         "phone": "0906 757 246",
         "argeCost": 47000000,
+        "point": 8.6,
+
     },
 ]
