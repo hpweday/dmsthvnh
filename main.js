@@ -271,7 +271,7 @@ let handleLogicData = {
 
                             <div class="modal_result-locate">
                                 <i class="fa-solid fa-location-dot"></i>
-                                ${res.addressShort}
+                                ${res.address[0]}
                             </div>
                         </div>
                         <div class="modal_result-description">
