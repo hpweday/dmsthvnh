@@ -209,11 +209,12 @@ ul {
 }
 
 .slogan {
-    font-size: 3rem;
-    color: #000;
+    font-size: 3.8rem;
+    color: #fff;
     text-align: center;
     position: absolute;
-    top: 50px;
+    width: 100%;
+    top: 28px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -227,7 +228,7 @@ ul {
 .content_search-img {
     height: 32rem;
     width: 100%;
-    background-image: url(../img/backGroundMain3.jpg);
+    background-image: url(../img/backGroundMain5.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -241,7 +242,7 @@ ul {
 .content_search-img-weddingPl {
     height: 32rem;
     width: 100%;
-    background-image: url(../img/backGroundMain4.jpg);
+    background-image: url(../img/backGroundMain5.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
