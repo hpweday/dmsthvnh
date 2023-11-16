@@ -150,6 +150,17 @@ let handleLogicData = {
                     break;
             }
         })
+
+        $('#close_result-search').click(function() {
+            $('.modal_results-wrap').addClass('hide')
+            $('.search_modal-empty').addClass('hide')
+        })
+
+        $('#close_result-searchft').click(function() {
+            $('.modal_results-wrap').addClass('hide')
+            $('.search_modal-empty').addClass('hide')
+
+        })
         
     },
 
@@ -179,14 +190,30 @@ let handleLogicData = {
 
         const typeArrange = $('#type_arrange').text();
 
+        $('.modal_results-wrap').removeClass('hide');
+        $('.search_modal-empty').addClass('hide')
+
         switch(typeSearch) {
             case "Trung tâm tiệc cưới":
                 var result = _this.filterSearchRestaurant(nameOrCity,quantityPeople, startDate, endDate)
-
+                console.log(result)
+                if(result.length == 0) {
+                    console.log('empty')
+                    $('.search_modal-empty').removeClass('hide')
+                } else {
+                    _this.renderItemSearchRestaurant(result);
+                }
                 break;
 
             case "Wedding Planner":
-                var result = _this.filterSearchWeddingPlanner(nameOrCity, typeArrange)
+                var resultWedding = _this.filterSearchWeddingPlanner(nameOrCity, typeArrange)
+                if(resultWedding.length == 0) {
+                    $('.search_modal-empty').removeClass('hide')
+                } else {
+                    _this.renderItemSearchWeddingPlanner(resultWedding)
+                }
+
+
                 break;
         }
     },
@@ -225,7 +252,82 @@ let handleLogicData = {
     },
 
 
+    renderItemSearchRestaurant: function(listResult) {
+        const _this = this;
 
+        const htmlRes = listResult.map(function(res) {
+            return `
+            <a href="./${res.pageID}.html" target="blank">
+                <div class="modal_result-item">
+                    <div class="modal_results-content-left">
+                        <div class="modal-result-img" style="background-image: url(./assets/img/${res.folder}/${res.timeSrc});"></div>
+                    </div>
+                    <div class="modal_results-content-mid">
+                        <div class="modal_result-title">${res.title}</div>
+                        <div class="modal_result-middle">
+                            <div class="modal_result-star">
+                                ${_this.getStar(res.star).join('')}
+                            </div>
+
+                            <div class="modal_result-locate">
+                                <i class="fa-solid fa-location-dot"></i>
+                                ${res.addressShort}
+                            </div>
+                        </div>
+                        <div class="modal_result-description">
+                            ${res.description}
+                        </div>
+                    </div>
+                    <div class="modal_results-content-right">
+                        <div class="modal_result-point">
+                            ${res.point}
+                        </div>
+                    </div>
+                </div>
+            </a>
+            `
+        })
+
+        $('.modal_results-content').html(htmlRes.join(''))
+    },
+
+
+    renderItemSearchWeddingPlanner: function(listResult) {
+        const _this = this;
+
+        const htmlRes = listResult.map(function(res) {
+            return `
+            <a href="./${res.pageID}.html" target="blank">
+                <div class="modal_result-item">
+                    <div class="modal_results-content-left">
+                        <div class="modal-result-img" style="background-image: url(./assets/img/${res.folder}/${res.timeSrc});"></div>
+                    </div>
+                    <div class="modal_results-content-mid">
+                        <div class="modal_result-title">${res.title}</div>
+                        <div class="modal_result-middle">
+                            <div class="modal_result-star">
+                                <span>${res.argeCost.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")} VNĐ</span>
+                            </div>
+
+                            <div class="modal_result-locate" style="margin-top: 0.5rem">
+                                <i class="fa-solid fa-location-dot"></i>
+                                ${res.address}
+                            </div>
+                        </div>
+                        <div class="modal_result-description">
+                            ${res.description}
+                        </div>
+                    </div>
+                    <div class="modal_results-content-right">
+                        
+                    </div>
+                </div>
+            </a>
+            `
+        })
+
+        $('.modal_results-content').html(htmlRes.join(''))
+    },
 
     filterSearchRestaurant: function(nameOrCity, quantity, dateStart, dateEnd) {
         const dayStart = +dateStart.split('-')[0];
@@ -276,21 +378,8 @@ let handleLogicData = {
             break;
         }
 
-        console.log(valueFilter)
-        // for (let i = 0; i < valueFilter.length; i++) {
-        //     // Duyệt qua mỗi phần tử trong mảng
-        //     for (let j = 0; j < valueFilter[i].EmptyDay.length; j++) {
-        //       // Kiểm tra xem phần tử có nằm trong khoảng không
-        //       if (valueFilter[i].EmptyDay[j] >= dayStart && valueFilter[i].EmptyDay[j] <= dayEnd) {
-        //         // Nếu có, thêm mảng vào kết quả và thoát khỏi vòng lặp trong mảng hiện tại
-        //         arrayDone.push(valueFilter[i]);
-        //         break;
-        //       }
-        //     }
-        // }
 
-
-        return arrayDone;
+        return valueFilter;
     },
 
 
