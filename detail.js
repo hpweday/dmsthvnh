@@ -121,6 +121,31 @@ function renderRestaurantItem(data) {
     `
 
     $('.content-wrap-detail').html(htmls)
+
+
+    
+
+    $('#Booking_btn').click(function() {
+        $('.modal_results-wrap').removeClass('hide')
+    })
+
+    $('#close_result-search').click(function() {
+        $('.modal_results-wrap').addClass('hide')
+    })
+
+    $('#close_result-searchft').click(function() {
+        $('#alert').removeClass('hide')
+
+        setTimeout(function() {
+            $('#alert').addClass('hide')
+            $('.modal_results-wrap').addClass('hide')
+
+            $('.modal_results-content input').val('')
+        }, 3000)
+
+
+    })
+
 }
 
 
@@ -239,6 +264,31 @@ function renderWeddingPlannerItem(data) {
     `
 
     $('.content-wrap-detail').html(htmls)
+
+
+        
+
+    $('#Booking_btn').click(function() {
+        $('.modal_results-wrap').removeClass('hide')
+    })
+
+    $('#close_result-search').click(function() {
+        $('.modal_results-wrap').addClass('hide')
+    })
+
+    $('#close_result-searchft').click(function() {
+        $('#alert').removeClass('hide')
+
+        setTimeout(function() {
+            $('#alert').addClass('hide')
+            $('.modal_results-wrap').addClass('hide')
+
+            $('.modal_results-content input').val('')
+        }, 3000)
+
+
+    })
+
 }
 
 
@@ -299,28 +349,6 @@ function getImageWedding(listConcept, folder) {
 // function 
 
 
-
-
-$('#Booking_btn').click(function() {
-    $('.modal_results-wrap').removeClass('hide')
-})
-
-$('#close_result-search').click(function() {
-    $('.modal_results-wrap').addClass('hide')
-})
-
-$('#close_result-searchft').click(function() {
-    $('#alert').removeClass('hide')
-
-    setTimeout(function() {
-        $('#alert').addClass('hide')
-        $('.modal_results-wrap').addClass('hide')
-
-        $('.modal_results-content input').val('')
-    }, 3000)
-
-
-})
 
 
 $('#general_scroll').click(function() {
