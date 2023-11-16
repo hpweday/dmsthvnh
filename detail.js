@@ -270,6 +270,7 @@ function renderWeddingPlannerItem(data) {
 
     $('#Booking_btn').click(function() {
         $('.modal_results-wrap').removeClass('hide')
+        console.log('a')
     })
 
     $('#close_result-search').click(function() {

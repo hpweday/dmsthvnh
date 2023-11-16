@@ -16,6 +16,19 @@
     <script src="./library/jquery-3.3.1.min.js"></script>
     <script src="./data.js"></script>
     <script src="./detail.js" defer></script>
+
+    <style>
+        .modal_results-content input {
+            width: 100%;
+            padding: 1rem 3rem;
+            border-radius: 20px;
+            border: 1px solid;
+        }
+
+        .modal_results {
+            height: 50%;
+        }
+    </style>
 </head>
 <body>
     <div class="navbar_wrap">
@@ -71,6 +84,7 @@
             </div>
             <div class="detail_nav-content-right">
                 <span>Giá từ: <p>40.000.000 VNĐ</p> - <p>60.000.000 VNĐ</p></span>
+                <button id="Booking_btn">Đặt</button>
             </div>
         </div>
         <div class="detail_content">
@@ -100,6 +114,11 @@
                         <div class="detail_outStanding-item">
                             <img src="./assets/img/wife.png" alt="">
                             <span>Đa dạng</span>
+
+                        </div>
+                        <div class="detail_outStanding-item">
+                            <img src="./assets/img/waiter.png" alt="">
+                            <span>Tận tâm</span>
 
                         </div>
                     </div>
@@ -189,7 +208,49 @@
             </div>
         </div> -->
 
+
     </div>
+
+    
+    <div class="modal_results-wrap hide" style="margin-bottom: 0rem;">
+        <div class="modal_results">
+            <div class="modal_results-header">
+                <span>Thông tin khách hàng</span>
+                <button id="close_result-search"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal_results-content-wrap">
+
+                <div class="modal_results-content" style="display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: space-around;
+                height: 100%;
+                padding: 1rem 3rem;">
+                   <input type="text" placeholder="Nhập họ và tên khách hàng">
+                   <input type="text" placeholder="Nhập số điện thoại khách hàng">
+                   <input type="text" placeholder="Nhập email khách hàng">
+                   <input type="text" id="input_concept" placeholder="Nhập tên Concept">
+                </div>
+
+            </div>
+            <div class="modal_results-footer">
+                <div id="alert" class="hide" style="    display: flex;
+                flex-direction: column;
+                color: green;
+                font-size: 1.3rem;
+                font-weight: 600;
+                width: 100%;
+                position: relative;
+                text-align: center;
+                left: 4%;">
+                    <span style="margin-bottom: 0.5rem;">Chúc mừng bạn đã đặt thành công.</span>
+                    <span>Chúng tôi sẽ sớm liên lạc lại với bạn!</span>
+                </div>
+                <button id="close_result-searchft">Đặt</button>
+            </div>
+        </div>
+    </div>
+
     <div class="footer_wrap">
         <div>
             <p>Mọi nội dung liên hệ Weday. Bảo lưu mọi bản quyền.</p>
