@@ -871,6 +871,15 @@ ul {
 }
 
 
+.modal_result-locate {
+    overflow: hidden; /* Ẩn nội dung tràn ra khỏi chiều rộng */
+    position: relative;
+    white-space: nowrap; /* Ngăn chặn text quấn dòng */
+    overflow: hidden; /* Ẩn phần text tràn ra khỏi chiều rộng */
+    text-overflow: ellipsis; /* Hiển thị dấu ba chấm (...) nếu text tràn ra */
+    display: block;
+}
+
 
 .modal_results-content-mid > div {
     margin-bottom: 1rem;

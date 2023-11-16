@@ -269,7 +269,7 @@ let handleLogicData = {
                                 ${_this.getStar(res.star).join('')}
                             </div>
 
-                            <div class="modal_result-locate">
+                            <div class="modal_result-locate" title="${res.address[0]}">
                                 <i class="fa-solid fa-location-dot"></i>
                                 ${res.address[0]}
                             </div>
