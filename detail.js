@@ -103,6 +103,11 @@ function renderRestaurantItem(data) {
                     
                     <span>${data.point} (điểm đánh giá)</span>
                 </div>
+                <div class="detail_content-point-item">
+                    <img style="width: 2rem;margin-left: 0.5rem" src="./assets/img/date.png" alt="">
+                    
+                    <span>${data.EmptyDay} (Ngày trống trong tháng)</span>
+                </div>
             </div>
             <div class="detail_content-address">
                 <div class="">
@@ -145,6 +150,9 @@ function renderRestaurantItem(data) {
 
 
     })
+
+
+    $('#input_concept').remove();
 
 }
 
